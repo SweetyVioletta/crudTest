@@ -1,10 +1,10 @@
 <?php
 
-namespace src\Repository;
+namespace App\Repository;
 
-use src\Entity\Joke;
-use src\Entity\JokeInterface;
-use src\Model\Icndb\IcndbClientInterface;
+use App\Entity\Joke;
+use App\Entity\JokeInterface;
+use App\Model\Icndb\IcndbClientInterface;
 
 /**
  * Class IcndbJokeRepository

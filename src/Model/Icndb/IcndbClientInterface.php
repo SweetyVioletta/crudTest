@@ -1,8 +1,8 @@
 <?php
 
-namespace src\Model\Icndb;
+namespace App\Model\Icndb;
 
-use src\Repository\IcndbJokeRepository;
+use App\Repository\IcndbJokeRepository;
 
 /**
  * Interface IcndbClientInterface

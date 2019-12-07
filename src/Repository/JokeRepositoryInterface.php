@@ -1,8 +1,8 @@
 <?php
 
-namespace src\Repository;
+namespace App\Repository;
 
-use src\Entity\JokeInterface;
+use App\Entity\JokeInterface;
 
 /**
  * Interface JokeRepositoryInterface

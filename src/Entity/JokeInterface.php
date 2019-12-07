@@ -1,6 +1,6 @@
 <?php
 
-namespace src\Entity;
+namespace App\Entity;
 /**
  * Interface JokeInterface
  * This is interface for Joke entity model

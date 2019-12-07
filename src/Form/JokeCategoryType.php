@@ -1,7 +1,7 @@
 <?php
 
-namespace src\Form;
-use src\Repository\JokeRepositoryInterface;
+namespace App\Form;
+use App\Repository\JokeRepositoryInterface;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;

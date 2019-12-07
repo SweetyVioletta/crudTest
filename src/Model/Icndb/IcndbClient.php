@@ -1,6 +1,6 @@
 <?php
 
-namespace src\Model\Icndb;
+namespace App\Model\Icndb;
 
 use GuzzleHttp\Client;
 
