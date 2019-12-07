@@ -17,9 +17,9 @@ interface IcndbClientInterface
     public function getCategoryList(): array;
 
     /**
-     * @param array $categories
+     * @param string $category
      *
      * @return string|null
      */
-    public function getJokeTextByCategory(array $categories): ?string;
+    public function getJokeTextByCategory(string $category): ?string;
 }

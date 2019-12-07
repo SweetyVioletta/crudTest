@@ -44,14 +44,14 @@ class IcndbClient implements IcndbClientInterface
     }
 
     /**
-     * @param array $categories
+     * @param string $category
      *
      * @return string|null
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getJokeTextByCategory(array $categories): ?string
+    public function getJokeTextByCategory(string $category): ?string
     {
-        $url = static::CATEGORY_RANDOM_JOKE . '?limitTo=[' . implode(',', $categories) . ']';
+        $url = static::CATEGORY_RANDOM_JOKE . "?limitTo=[$category]";
         $response = new IcndbResponse($this->guzzleClient->request(static::METHOD, $url));
         return $response->getValue();
     }
