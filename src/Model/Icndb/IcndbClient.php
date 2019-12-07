@@ -13,6 +13,7 @@ class IcndbClient implements IcndbClientInterface
     protected const CATEGORY_LIST_URL = 'categories';
     protected const CATEGORY_RANDOM_JOKE = 'jokes/random';
     protected const METHOD = 'GET';
+    protected const DEFAULT_URL = 'https://api.icndb.com';
 
     /**
      * @var string
@@ -28,7 +29,7 @@ class IcndbClient implements IcndbClientInterface
      *
      * @param string $url
      */
-    public function __construct(string $url)
+    public function __construct(string $url = self::DEFAULT_URL)
     {
         $this->guzzleClient = new Client(['base_uri' => $url]);
     }
@@ -53,6 +54,7 @@ class IcndbClient implements IcndbClientInterface
     {
         $url = static::CATEGORY_RANDOM_JOKE . "?limitTo=[$category]";
         $response = new IcndbResponse($this->guzzleClient->request(static::METHOD, $url));
-        return $response->getValue();
+        $value = $response->getValue();
+        return $value['joke'] ?? null;
     }
 }

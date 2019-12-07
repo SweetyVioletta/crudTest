@@ -46,7 +46,7 @@ class JokeController extends AbstractController
         return $this->render(
             'joke/form.html.twig',
             [
-                'form' => $form
+                'form' => $form->createView(),
             ]
         );
     }
