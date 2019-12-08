@@ -14,7 +14,7 @@ class JokeControllerTest extends WebTestCase
     {
         $client = static::createClient();
 
-        $client->request(OAUTH_HTTP_METHOD_GET, '/joke');
+        $client->request('GET', '/joke');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
@@ -22,7 +22,7 @@ class JokeControllerTest extends WebTestCase
     public function testSubmitForm()
     {
         $client = static::createClient();
-        $crawler = $client->request(OAUTH_HTTP_METHOD_GET, '/joke');
+        $crawler = $client->request('GET', '/joke');
 
         $form = $crawler->selectButton('Send')->form();
         $form->setValues([

@@ -6,7 +6,6 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "guzzlehttp/guzzle": "~6.0",
-        "phpunit/phpunit": "^8.5",
         "sensio/framework-extra-bundle": "^5.5",
         "symfony/console": "5.0.*",
         "symfony/dotenv": "5.0.*",
