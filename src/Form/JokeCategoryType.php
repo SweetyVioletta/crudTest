@@ -10,7 +10,6 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 /**
  * Class JokeCategoryType
- * @package src\Form
  */
 class JokeCategoryType extends AbstractType
 {

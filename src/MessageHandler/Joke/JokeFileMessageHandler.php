@@ -41,7 +41,7 @@ class JokeFileMessageHandler implements MessageHandlerInterface
     public function __invoke(JokeFileMessage $message)
     {
         try {
-        $this->filesystem->appendToFile(static::FILENAME, $message->getJoke()->getText());
+            $this->filesystem->appendToFile(static::FILENAME, $message->getJoke()->getText());
         } catch (IOExceptionInterface $exception) {
             echo 'An error occurred while writing into file';
         }

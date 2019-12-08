@@ -25,3 +25,11 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    App\MessageHandler\Joke\JokeEmailMessageHandler:
+        tags:
+            - name: messenger.message_handler
+              handles: App\Message\Joke\JokeEmailMessage
+    App\MessageHandler\Joke\JokeFileMessageHandler:
+        tags:
+            - name: messenger.message_handler
+              handles: App\Message\Joke\JokeFileMessage
